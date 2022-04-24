@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="shared_param" type="shared_param_srv.py" name="parameter"/>
+    <node pkg="plane" type="vw" name="vw"/>
+    <node pkg="plane" type="mv" name="mv"/>
+    <node pkg="turtlesim" type="turtle_teleop_key" name="teleop"/>
+</launch>

@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="Color Tutorial Model">
+    <static>true</static>
+    <link name="robot_link">
+      <collision name="body_collision">
+        <pose>0 0 0.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2 2 3</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="wheel1_visual">
+        <pose>-1 0 -1 0 1.57079 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.5</radius>
+            <length>0.2</length>
+          </cylinder>
+        </geometry>
+        <material> <!-- Wheel material -->
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.1 0.1 0.2 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material> <!-- End wheel material -->
+      </visual>
+      <visual name="wheel2_visual">
+        <pose>1 0 -1 0 1.57079 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.5</radius>
+            <length>0.2</length>
+          </cylinder>
+        </geometry>
+        <material> <!-- Wheel material -->
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.1 0.1 0.2 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material> <!-- End wheel material -->
+      </visual>
+      <visual name="power_led_visual">
+        <pose>0.225 0.225 0.25 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.003</radius>
+          </sphere>
+        </geometry>
+      </visual>
+      <visual name="body_visual">
+        <geometry>
+          <box>
+            <size>2.5 2 2</size>
+          </box>
+        </geometry>
+      <material>
+              <script>
+                <uri>model://MyTarget/materials/scripts</uri>
+                <uri>model://MyTarget/materials/textures</uri>
+                <name>BodyTargetTexture</name>
+              </script>
+      </material>
+      </visual>
+      <visual name="head_visual">
+        <pose>0 0 1 0 0 -2.5</pose>
+        <geometry>
+          <sphere>
+            <radius>1</radius>
+          </sphere>
+          <!-- <mesh>
+            <uri>model://MyTarget/meshes/head.dae</uri>
+          </mesh> -->
+        </geometry>
+      <material>
+              <script>
+                <uri>model://MyTarget/materials/scripts</uri>
+                <uri>model://MyTarget/materials/textures</uri>
+                <name>BodyTargetTexture</name>
+              </script>
+      </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

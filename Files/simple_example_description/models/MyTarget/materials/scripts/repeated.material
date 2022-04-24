@@ -1,0 +1,14 @@
+material BodyTargetTexture
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture /home/nestech/work/catkin_ws/src/simple_example_description/models/MyTarget/materials/textures/seamless_texture.png
+      }
+    }
+  }
+}

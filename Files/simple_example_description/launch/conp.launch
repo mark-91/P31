@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="simple_example_description" type="plane.py" name="conp" />
+</launch>
+
